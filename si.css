@@ -1,0 +1,129 @@
+body{
+    background-image:url(womenn.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#results{
+    color: rgb(190, 192, 192);
+    font-size: large;
+    position: relative;
+ left: 700px;
+    bottom: 350px;
+}
+#ww
+{
+    color: rgb(240, 254, 255);
+    position: relative;
+    font-size: x-small;
+    left: 950px;
+    bottom: 150px;;
+}
+#mi
+{ position: relative;
+    bottom: 400px;
+    left: 650px;
+    font-size: large;
+    color: azure;
+    
+}
+#hh
+{
+    font-size: large;
+    color: aqua;
+    left: 700px;;
+}
+button
+{ position: relative;
+    bottom: 350px;
+    border-radius: 100px;
+    font-size: x-large;
+    color: rgb(246, 242, 242);
+    background-color: rgb(77, 77, 241);
+}
+p
+{
+    font-size: large;
+}
+#xx
+{
+    position: relative;
+    left: 900px;
+}
+h1{
+    color: white;
+}
+#bo1
+{
+    position: relative;
+    left:40px;
+    bottom:50px;
+}
+#hi{
+    background-color: black;
+    font-size: 20px;
+    position: relative;
+    left: 20px;
+    color: white;
+    bottom: 130px;
+}
+    @media screen and (max-width:600px){
+
+        body{
+            background-image:url(banner-2-mobile-m.jpg) ;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        #ww
+        {
+            color: rgb(240, 254, 255);
+            position: relative;
+            font-size: x-small;
+            left: 50px;
+            top: 400px;
+        }
+        #xx
+        {
+            position: relative;
+            left: 5px;
+            top: 90px;
+            font-size: small;
+        }
+        #mi
+    { position: relative;
+        bottom: 350px;
+        left: 20px;
+        font-size: 20px;
+        background-color: black;
+        
+    }
+    #results{
+        color: white;
+        font-size: 30px;
+        position: relative;
+     left: 150px;
+        bottom: 350px;
+    }
+    button
+    { position: relative;
+        bottom: 300px;
+        border-radius: 100px;
+        font-size: x-large;
+        color: rgb(246, 242, 242);
+        background-color: rgb(77, 77, 241);
+        left: 0px;
+    }
+    
+    #hi{
+        background-color: black;
+        font-size: 20px;
+        position: relative;
+        left: 50px;
+        font-weight: 900;
+    top: 100px;}
+    }
+    
+

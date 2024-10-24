@@ -1,0 +1,167 @@
+
+body{
+    background-image:url(manly.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: aliceblue;
+}
+#results{
+    color: white;
+    font-size: 20px;
+    position: relative;
+ left: 200px;
+    bottom: 350px;
+}
+#ww
+{
+    color: rgb(240, 254, 255);
+    position: relative;
+    font-size: x-small;
+    left: 950px;
+    bottom: 150px;
+}
+#mi
+{ position: relative;
+    bottom: 350px;
+    left: 90px;
+    font-size: 20px;
+    
+}
+#hh
+{
+    font-size: large;
+    color: aqua;
+    left: 700px;;
+}
+button
+{ position: relative;
+    bottom: 300px;
+    border-radius: 100px;
+    font-size: x-large;
+    color: rgb(246, 242, 242);
+    background-color: rgb(77, 77, 241);
+    left: 150px;
+}
+p
+{
+    font-size: large;
+}
+#xx
+{
+    position: relative;
+    left: 10px;
+    top: 100px;
+}
+#hi{
+    background-color: black;
+    font-size: 20px;
+    position: relative;
+    left: 50px;
+    font-weight: 900;
+bottom: 155px;}
+@media screen and (max-width:600px){
+
+    #ww
+    {
+        color: rgb(240, 254, 255);
+        position: relative;
+        font-size: x-small;
+        left: 50px;
+        top: 400px;
+    }
+    #xx
+    {
+        position: relative;
+        left: 5px;
+        top: 90px;
+        font-size: small;
+    }
+    #mi
+{ position: relative;
+    bottom: 350px;
+    left: 20px;
+    font-size: 20px;
+    background-color: black;
+    
+}
+#results{
+    color: white;
+    font-size: 30px;
+    position: relative;
+ left: 150px;
+    bottom: 350px;
+}
+button
+{ position: relative;
+    bottom: 300px;
+    border-radius: 100px;
+    font-size: x-large;
+    color: rgb(246, 242, 242);
+    background-color: rgb(77, 77, 241);
+    left: 0%;
+}
+
+#hi{
+    background-color: black;
+    font-size: 20px;
+    position: relative;
+    left: 50px;
+    font-weight: 900;
+top: 100px;}
+}
+@media screen and (max-width:450px){
+    
+    #ww
+    {
+        color: rgb(240, 254, 255);
+        position: relative;
+        font-size: x-small;
+        left: 5px;
+        top: 400px;
+    }
+    #xx
+    {
+        position: relative;
+        left: 5px;
+        top: 90px;
+        font-size: 10px;
+    }
+    #xx-table{
+        size: 10px;
+    }
+    #mi
+{ position: relative;
+    bottom: 350px;
+    left: 20px;
+    font-size: 10px;
+    background-color: black;
+    
+}
+#results{
+    color: white;
+    font-size: 5px;
+    position: relative;
+ left: 10px;
+    bottom: 350px;
+}
+button
+{ position: relative;
+    bottom: 300px;
+    border-radius: 100px;
+    font-size: x-large;
+    color: rgb(246, 242, 242);
+    background-color: rgb(77, 77, 241);
+    left: 50px;
+}
+
+#hi{
+    background-color: black;
+    font-size: 20px;
+    position: relative;
+    left: 50px;
+    font-weight: 900;
+top: 100px;}
+
+}

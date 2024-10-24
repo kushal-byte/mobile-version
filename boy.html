@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="new.png"><title>men BC</title></head>
+
+        <link rel="stylesheet" href="boss.css">
+        <body>
+            <div id="container">
+   <div> <span id="bo1"><img src="kkk.png"
+        height="150"
+        width="300"></span></div>
+    
+   
+   
+  <div>     <span id="mi">
+    <h1>INBODY CALC men</h1>
+    <label for="weight">Weight(kg) : </label>
+    <input type="number" id="weight" placeholder="Enter weight in kg"><br>
+    <label for="height">Height(feet): </label>
+    <input type="number" id="height"  placeholder="Enter height in feet"><br>
+    <label for="age">Age(years) : </label>
+    <input type="number" id="age" placeholder="Enter age in years"></span></div>
+
+    <div><button style="color: blue; position: relative; top: 100px;" onclick="calculate()">Calculate</button></div>
+    <div>     <span id="results" >
+        <p><strong>BMI:</strong> <span id="b-value"></span></p>
+        <p><strong>Fat percentage :</strong> <span id="f-value"></span></p>
+        <p><strong>BMR:</strong> <span id="r-value"></span></p>
+    </span>
+</div>
+ <div>    <span id="ww"> <h1>REQUIRED CONSUMPTION OF CALORIES </h1>
+          <p><strong>For maintainance :</strong> <span id="x-value"></span></p>
+            <p><strong>For gaining muscle:</strong> <span id="y-value"></span></p>
+            <p><strong>For losing weight :</strong> <span id="z-value"></span></p>
+        </span>
+    </div>
+   <div> <span id="xx"> <h1>MACROS</h1>
+        <table border="1">
+<tr align="right">
+    <th width="110">goals</th>
+    <th width="110">protien</th>
+<th width="110">carbohydrate</th>
+<th width="110">fats</th></tr>
+<tr>
+    <td width="110">maintainance</td>
+    <td width="110"> <span id="h-value"></span></td>
+    <td width="130"><span id="i-value"></span></td>
+    <td width="110"><span id="j-value"></span></td>
+</tr>
+<tr>
+    <td width="110">gain muscle </td>
+    <td width="110"><span id="q-value"></span></td>
+    <td width="130"><span id="w-value"></span></td>
+    <td width="110"><span id="e-value"></span></td>
+</tr>
+<tr>
+    <td width="110">fat loss</td>
+    <td width="110"><span id="k-value"></span></td>
+    <td width="130"><span id="o-value"></span></td>
+    <td width="110"><span id="c-value"></span></td>
+</tr>
+
+        </table></span></div>
+
+    
+        
+    
+        <script>
+            function calculate() {
+                const weight = parseFloat(document.getElementById('weight').value);
+                const height = parseFloat(document.getElementById('height').value);
+                const age = parseFloat(document.getElementById('age').value);
+
+                if (isNaN(weight) || isNaN(height) || isNaN(age)) {
+                    alert('Please enter valid values!');
+                    return;
+                }
+    
+                // Formula for B: (w*10.764) / (h * h)
+                const B = (weight * 10.764) / (height * height);
+    
+                // Formula for F: (1.20 x B) + (0.23 x A) - 16.2
+                const F = (1.20 * B) + (0.23 * age) - 16.2;
+    
+                // Formula for R: B = (10 x w) + (6.25 x h*30.5) - (5 x a) + 5
+                const R = (10 * weight) + (6.25 * height * 30.5) - (5 * age) + 5;
+                //for maintainance no or little work
+                const m = R*1.2;
+                //for gain 
+                const g=R*1.7;
+                //for loss
+                const l=R*1.1;
+                // macros protien 
+                const h = weight*0.9;
+                const q = weight*1.6;
+                const k = weight*1.5;
+                // macros carbs
+                const i = weight*8;
+                const w = weight*7;
+                const o = weight*5;
+                // macros fats
+                const j = weight*0.8;
+                const e = weight*0.6;
+                const c = weight*0.4;
+ // Body fat type classification
+ let bodyType = '';
+        if (F < 6) {
+            bodyType = 'Essential fat';
+        } else if (F >= 6 && F <= 13) {
+            bodyType = 'Athlete';
+        } else if (F >= 14 && F <= 17) {
+            bodyType = 'Fitness';
+        } else if (F >= 18 && F <= 24) {
+            bodyType = 'Average';
+        } else {
+            bodyType = 'Obese';
+        }
+                // Display results
+                document.getElementById('b-value').innerText = B.toFixed(1)+" kg/m2";
+                document.getElementById('f-value').innerText = F.toFixed(1)+ "% (" + bodyType + ")";
+                document.getElementById('r-value').innerText = R.toFixed(1)+"calories";
+                document.getElementById('x-value').innerText = m.toFixed(0)+"cal";
+                document.getElementById('y-value').innerText = g.toFixed(0)+"cal";
+                document.getElementById('z-value').innerText = l.toFixed(0)+"cal";
+                document.getElementById('h-value').innerText = h.toFixed(1)+"g";
+                document.getElementById('q-value').innerText = q.toFixed(1)+"g";
+                document.getElementById('k-value').innerText = k.toFixed(1)+"g";
+                document.getElementById('i-value').innerText = i.toFixed(1)+"g";
+                document.getElementById('w-value').innerText = w.toFixed(1)+"g";
+                document.getElementById('o-value').innerText = o.toFixed(1)+"g";
+                document.getElementById('j-value').innerText = j.toFixed(1)+"g";
+                document.getElementById('e-value').innerText = e.toFixed(1)+"g";
+                document.getElementById('c-value').innerText = c.toFixed(1)+"g";
+            }
+        </script>
+     <div>   <span id="hi"><p>you can caluculate your intake through apps like
+            <br> "MYFITNESSPAL" "HEALTHIFYME " so on </p></span></div></div>
+</body>
+    </html>
