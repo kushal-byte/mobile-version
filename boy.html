@@ -7,7 +7,7 @@
         <link rel="icon" type="image/png" href="new.png"><title>men BC</title></head>
 
         <link rel="stylesheet" href="boss.css">
-        <body>
+        <body>  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
             <div id="container">
    <div> <span id="bo1"><img src="kkk.png"
         height="150"
@@ -65,7 +65,9 @@
 
         </table></span></div>
 
-    
+       <div>
+            <canvas id="fatPercentageChart" ></canvas>
+       </div>
         
     
         <script>
@@ -134,7 +136,81 @@
                 document.getElementById('j-value').innerText = j.toFixed(1)+"g";
                 document.getElementById('e-value').innerText = e.toFixed(1)+"g";
                 document.getElementById('c-value').innerText = c.toFixed(1)+"g";
+             updateChart(F);
             }
+
+            function updateChart(userFatPercentage) {
+                const ctx = document.getElementById('fatPercentageChart').getContext('2d');
+                const athleticRange = [17, 16, 15, 14, 13, 12];
+                const leanRange = [6, 7, 8, 9, 10, 11];
+                const avgRange = [20, 21, 22, 23, 24, 24];
+                const ovRange = [25, 26, 27, 28, 29, 29];
+                const obsRange = [30, 31, 32, 33, 34, 35];
+                const userValues = Array(6).fill(userFatPercentage);
+
+                new Chart(ctx, {
+                    
+                    type: 'bar',
+                    data: {
+                        labels: [" 1"],
+                        datasets: [
+                            {
+                                label: "User Body Fat (%)",
+                                data: userValues,
+                                borderColor: "blue",
+                                borderWidth: 2,
+                                fill: false
+                            },
+                            {
+                                label: "Athletic(%)",
+                                data: athleticRange,
+                                borderColor: "green",
+                                borderWidth: 2,
+                                fill: false
+                            },
+                            {
+                                label: "lean (%)",
+                                data: leanRange,
+                                borderColor: "yellow",
+                                borderWidth: 2,
+                                fill: false
+                            }
+                            ,
+                            {
+                                label: "average (%)",
+                                data: avgRange,
+                                borderColor: "red",
+                                borderWidth: 2,
+                                fill: false
+                            }
+                            ,
+                            {
+                                label: "overweight (%)",
+                                data: ovRange,
+                                borderColor: "white",
+                                borderWidth: 2,
+                                fill: false
+                            }
+                            ,
+                            {
+                                label: "obese (%)",
+                                data: obsRange,
+                                borderColor: "orange",
+                                borderWidth: 2,
+                                fill: false
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 40
+                            }
+                        }
+                    }
+                }); }
         </script>
      <div>   <span id="hi"><p>you can caluculate your intake through apps like
             <br> "MYFITNESSPAL" "HEALTHIFYME " so on </p></span></div></div>
